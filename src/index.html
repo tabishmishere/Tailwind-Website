@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDesktop - Web App to Desktop</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="Assets/asset 0.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- --------------Navbar------------------>
+    <nav class="flex justify-between items-center p-3 bg-white fixed top-0 left-0 right-0 z-20 shadow-md">
+        <a href="#" id="brand" class="flex flex-1 gap-2 items-center">
+            <img class="object-cover max-w-12 max-h-12" src="Assets/asset 0.png" alt="logo">
+            <span class="text-large font-medium">ToDesktop</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="#" class="font-medium font-weight: 500; hover:text-primary">Pricing</a>
+            <a href="#" class="font-medium font-weight: 500; hover:text-primary">Docs</a>
+            <a href="#" class="font-medium font-weight: 500; hover:text-primary">Changelog</a>
+            <a href="#" class="font-medium font-weight: 500; hover:text-primary">Blog</a>
+            <a href="#" class="font-medium font-weight: 500; hover:text-primary">Login</a>
+        </div>
+        <div class="hidden lg:flex flex-1 justify-end">
+            <button class="flex gap-2 items-center border  border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+                <img src="Assets/asset 1.svg" alt="">
+                <span>Electron Developers</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <button class="p-2 lg:hidden " onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+        <!-- -----------------CSS For Mobile--------------->
+        <div id="nav-dialog" class="fixed z-10 md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-w-12 max-h-12" src="Assets/asset 0.png" alt="logo">
+                    <span class="text-large font-medium">ToDesktop</span>
+                </a>
+                <button class="p-2 md:hidden " onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Pricing</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Docs</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Changelog</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Blog</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Login</a>
+            </div>
+            <div class="h-[1px] bg-gray-300">
+                <button
+                    class="mt-6 w-full flex gap-2 items-center hover:bg-gray-50  px-6 py-4 rounded-lg hover:border-gray-600">
+                    <img src="Assets/asset 1.svg" alt="">
+                    <span>Electron Developers</span>
+                </button>
+            </div>
+        </div>
+
+    </nav>
+    <!------------------------Main-Section--------------------------->
+    <main class="mt-16">
+        <!--------------------Hero-Section-------------------->
+        <div id="hero" class=" bg-gradient-to-b from-purple-50 to-orange-50">
+            <div id="hero-container"
+                class="max-w-4xl mx-auto px-6 pt-6 pb-32 flex flex-col sm:items-center sm:text-center sm:pt-12">
+                <div id="version-text"
+                    class="flex items-center my-6 gap-2 border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1 w-fit shadow-md hover:shadow-lg hover:-translate-y-1 transition group">
+                    <div class="w-2 h-2 bg-yellow-400 border rounded-full border-yellow-600"></div>
+                    <p class="font-display font-medium text-yellow-600"> v0.24.0: <span class="text-yellow-800"> Find
+                            in-page bug fixes</span></p>
+                    <i
+                        class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+                </div>
+
+                <div id="hero-features" class="hidden sm:flex gap-8 my-6">
+                    <div class="flex justify-center gap-2 items-center text-gray-500">
+                        <i class="fa-solid fa-file-code text-sm"></i>
+                        <p>Code Optional</p>
+                    </div>
+                    <div class="flex justify-center gap-2 items-center text-gray-500">
+                        <i class="fa-solid fa-hand-back-fist"></i>
+                        <p>Drap & Drop</p>
+                    </div>
+                    <div class="flex justify-center gap-2 items-center text-gray-500">
+                        <i class="fa-solid fa-laptop"></i>
+                        <p>Windows, Mac, Linux</p>
+                    </div>
+                </div>
+                <h1 class="text-4xl font-semibold leading-snug mt-4 sm:text-7xl sm:leading-normal">Web app to desktop
+                    app in minutes</h1>
+                <p class="text-xl mt-4 sm:text-2xl sm:mt-8 text-gray-800">Take your web app codebase and transform it
+                    into a cross platform desktop app with native functionality.</p>
+                <div id="button-container" class="mt-12 flex gap-4 flex-col sm:flex-row">
+                    <button
+                        class="px-8 py-3 font-semibold rounded-lg text-white bg-primary shadow-sm hover:bg-opacity-90">Download
+                        Now</button>
+                    <button
+                        class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 hover:border-gray-800">Read
+                        Docs</button>
+                </div>
+            </div>
+            <!--------------------------Companies-Section-------------------------------------->
+            <div id="companies-container" class="flex flex-col gap-8">
+                <div id="companies-title" class="flex justify-center gap-2">
+                    <img class="translate-y-2" src="Assets/asset 2.svg" alt="">
+                    <span class="font-medium"> Apps powered by ToDesktop </span>
+                    <img class="-scale-100 translate-y-2 " src="Assets/asset 2.svg" alt="">
+                </div>
+                <div id="line-group" class="flex flex-col gap-4 ">
+                    <div id="line-1" class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300  md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 3.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 4.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">LifeAt</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 5.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">ClickUp</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 6.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Linear</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 7.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Cursor</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 8.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Voiceflow</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 9.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Kitemaker</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 10.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Cron</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 11.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Bento</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 12.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Grain</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 13.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Sunsama</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 14.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Beeper</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 15.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Cal</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 16.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Webstudio</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 17.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Rise</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 18.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Basedash</span>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="line-2" class="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear">
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300  md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 6.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300  md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 8.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300  md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 7.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300  md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 3.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 4.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">LifeAt</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 5.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">ClickUp</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 6.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Linear</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 7.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Cursor</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 8.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Voiceflow</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 9.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Kitemaker</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 10.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Cron</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 11.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Bento</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 12.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Grain</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 12.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Grain</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 12.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Grain</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 12.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Grain</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 12.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Grain</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 13.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Sunsama</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 14.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Beeper</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 15.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Cal</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 16.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Webstudio</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 17.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Rise</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 18.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Basedash</span>
+                        </div>
+
+                    </div>
+
+
+                    <div id="line-3"
+                        class="flex md:hidden gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300  md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 3.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 4.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 5.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 6.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 7.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 8.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 9.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 10.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 11.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 12.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 13.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-30 md:min-w-30">
+                            <img class="w-12 h-12 md:h-14 md:w-14" src="Assets/asset 14.png" alt="">
+                            <span class="text-[12px] md:text-[14px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------Step Featuers-------------------->
+        <div id="steps" class="flex flex-col gap-6 container mt-20">
+            <h2 class="font-display text-5xl sm:font-semibold mb-14">How it works</h2>
+            <div id="step1" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row justify-between">
+                <div class="flex flex-col gap-6 lg:w-1/2 ">
+                    <span
+                        class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">Step
+                        1</span>
+                    <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+                    <p class="text-lg font-light">Copy and paste your web app url into ToDesktop. Customise your app
+                        design, app icon and window frame UI with no code.</p>
+                    <ul class="grid grid-cols-2 gap-2">
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Menubar/tray menus</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Offline Support</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Launch On Startup</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Customisable Menus</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Tabs (Mac Only)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-12">
+                    <img src="Assets/asset 66.svg" alt="">
+                </div>
+            </div>
+            <div id="step2" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row justify-between">
+                <div class="flex flex-col gap-6 lg:w-1/2 ">
+                    <span
+                        class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">Step
+                        2</span>
+                    <h3 class="text-4xl">Add desktop code to customise your web app</h3>
+                    <p class="text-lg font-light">No need to create a new repository, just add code from our desktop
+                        APIs to your codebase and get access to system level functionality.</p>
+                    <ul class="grid grid-cols-2 gap-2">
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Native Notifications</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Application Menu</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Dock/Icon</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">File System Access</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Global Keyboard Shorcuts</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">...plus more API's in our <br> docs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-12">
+                    <img src="Assets/asset 66.svg" alt="">
+                </div>
+            </div>
+            <div id="step3" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row justify-between">
+                <div class="flex flex-col gap-6 lg:w-1/2 ">
+                    <span
+                        class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">Step
+                        3</span>
+                    <h3 class="text-4xl">Publish<i class="fa-solid fa-rocket px-3"></i></h3>
+                    <p class="text-lg font-light">One-click will publish your desktop app to your customers and give you
+                        a download link to put on your website.</p>
+                    <ul class="grid grid-cols-2 gap-2">
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Super-fast global CDN</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Download links on your domain</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Magic universal links</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href=""> Download analytics</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Manage version numbers</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Native installers for all platforms</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-12">
+                    <img src="Assets/asset 66.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------Bento-Grid-Section---------------------------------->
+        <div id="bento-grid" class="container">
+            <h2 class="text-5xl sm:font-semibold mb-14 max-w-2xl leading-normal">ToDesktop handles the details</h2>
+            <div id="grid-container" class="flex flex-col gap-6 lg:grid lg:grid-cols-3" style="grid-auto-rows: 96px;">
+                <div
+                    class="row-start-1 row-end-3 group rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div
+                        class="bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+                        <h3 class="text-2xl">Native Notification</h3>
+                        <img src="Assets/asset 37.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="row-start-1 row-end-4 group rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div
+                        class="bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+                        <h3 class="text-2xl">Auto Updates</h3>
+                        <p class="text-lg text-center font-light">We’ll ensure the underlying browser is up to date and
+                            deliver performance improvements, security patches, & additional features.</p>
+                        <img src="Assets/asset 38.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="row-start-1 row-end-3 group rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div
+                        class="bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+                        <h3 class="text-2xl">Plugins</h3>
+                        <img src="Assets/asset 39.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="row-start-3 row-end-6 group rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div
+                        class="bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+                        <h3 class="text-2xl">Access to Native APIs</h3>
+                        <p class="text-lg text-center font-light">ToDesktop ensures the underlying browser, performance
+                            improvements, security patches and additional features are always up to date.</p>
+                        <img src="Assets/asset 40.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="row-start-4 row-end-6 group rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div
+                        class="bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+                        <h3 class="text-2xl">Customizable look and feel</h3>
+                        <img src="Assets/asset 41.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="row-start-3 row-end-6 group rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div
+                        class="bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+                        <h3 class="text-2xl">Native Installers</h3>
+                        <p class="text-lg text-center font-light">We even provide a magic link which will detect your
+                            users operating system & download the most up to date version of your app.</p>
+                        <img src="Assets/asset 43.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!----------------------Companies-Feature-Line----------------------------------->
+        <div id="features-line" class="container mt-4">
+            <div class="border rounded-lg overflow-hidden flex justify-center p-4">
+                <div id="line4" class="flex gap-8 p-6 ">
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Downlode Analytics</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Global Hotkeys</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Custom Menus</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Multi-window support</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Trays</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Deep Linking
+                    </h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Launch at Startup
+                    </h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Offline Support
+                    </h3>
+                    <span>•</span>
+                </div>
+            </div>
+        </div>
+        <!-----------------------------Customer-Stories-Section------------------->
+
+        <div id="testimonials" class="container">
+            <h2 class="text-5xl font-semibold mb-14">Customer Stories</h2>
+            <div class="rounded-xl border flex flex-col lg:flex-row items-end">
+                <div class="flex flex-col gap-12 p-8">
+                    <div class="h-4 w-fit">
+                        <img src="Assets/asset 44.svg" alt="">
+                    </div>
+                    <h3 class="text-xl leading-relaxed">ClickUp used ToDesktop to get their desktop app in front of
+                        customers in days instead of months.</h3>
+                    <div id="tag-container" class="flex gap-3 flex-wrap">
+                        <div
+                            class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Chromeless UI</span>
+                        </div>
+                        <div
+                            class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Native Spellcheck</span>
+                        </div>
+                        <div
+                            class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Task time in menubar</span>
+                        </div>
+                        <div
+                            class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Notification count in dock</span>
+                        </div>
+                        <div
+                            class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Global hotkey to create task</span>
+                        </div>
+                    </div>
+                    <p class="text-lg font-light text-gray-500">“ToDesktop provided us with a <span
+                            class="text-gray-800 font-semibold">polished desktop app</span> in no time. Their expert
+                        team guided us through a smooth migration from our outdated legacy desktop app, enabling us to
+                        deliver <span class="text-gray-800 font-semibold">new and improved features</span> to our
+                        customers within days.”</p>
+                    <div id="user-card" class="flex gap-4">
+                        <div class="w-12">
+                            <img class="rounded-full" src="Assets/asset 45.jpeg" alt="">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3>Zeb Evans</h3>
+                            <p class="text-gray-500 ">Founder & CEO, <a
+                                    class="border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500"
+                                    href="#">ClickUp</a> </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="p-12" src="Assets/asset 46.png" alt="">
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row justify-between gap-4 mt-6">
+                <div class="flex p-6 gap-6 rounded-2xl gradient-hover-outer flex-col">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12  bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-code text-indigo-800"></i>
+                            <!-- <img src="Assets/asset 47.png" alt=""> -->
+                        </div>
+                        <h3 class="text-2xl font-semibold">Native APIs</h3>
+                    </div>
+                    <p class="text-lg font-light">“What sets ToDesktop apart is its seamless integration with native
+                        APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've
+                        crafted an exceptionally polished desktop user experience. ”</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div
+                                class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                <img src="Assets/asset 47.png" class="min-w-16 min-h-16" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="Assets/asset 48.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-semibold">Rick Pastoor</h3>
+                            <a href="#"
+                                class="border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500 w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex p-6 gap-6 rounded-2xl gradient-hover-outer flex-col">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12  bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-code text-indigo-800"></i>
+                            <!-- <img src="Assets/asset 47.png" alt=""> -->
+                        </div>
+                        <h3 class="text-2xl font-semibold">Cleaner UI</h3>
+                    </div>
+                    <p class="text-lg font-light">“It was unbelievably simple for us to get a desktop app up and
+                        running, and we didn’t have to write a single line of code. Once we had this MVP, we were able
+                        to extend the app’s functionality with custom behavior using ToDesktop’s libraries. ”</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div
+                                class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                <img src="Assets/asset 47.png" class="min-w-16 min-h-16" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="Assets/asset 48.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-semibold">Rick Pastoor</h3>
+                            <a href="#"
+                                class="border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500 w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex p-6 gap-6 rounded-2xl gradient-hover-outer flex-col">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12  bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-code text-indigo-800"></i>
+                            <!-- <img src="Assets/asset 47.png" alt=""> -->
+                        </div>
+                        <h3 class="text-2xl font-semibold">Code optional</h3>
+                    </div>
+                    <p class="text-lg font-light">“It was unbelievably simple for us to get a desktop app up and
+                        running, and we didn’t have to write a single line of code. Once we had this MVP, we were able
+                        to extend the app’s functionality with custom behavior using ToDesktop’s libraries. ”</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div
+                                class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                <img src="Assets/asset 47.png" class="min-w-16 min-h-16" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="Assets/asset 48.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-semibold">Rick Pastoor</h3>
+                            <a href="#"
+                                class="border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500 w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!------------------------------------Customer-Stories-Section-2--------------------->
+            <div class="rounded-xl flex flex-col lg:flex-row bg-black mt-6 lg:pt-12 pt-6">
+                <div class="flex flex-col gap-4 lg:gap-8 p-8 flex-1">
+                    <span class="text-gray-400 font-display font-medium">Ready to start building?</span>
+                    <h2 class="text-4xl lg:text-5xl text-white leading-tight">Create your desktop app for free*</h2>
+                    <p class="text-gray-300 text-lg lg:text-xl font-light">ToDesktop Builder will take you step-by-step
+                        through the process of creating your first desktop app in just a few minutes.</p>
+                    <button
+                        class="bg-primary text-white py-3 rounded-lg hover:bg-opacity-90 flex gap-4 justify-center items-center">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Downlode ToDesktop Builder</span>
+                    </button>
+                    <p class="text-gray-400 text-xs leading-tight italic">*You can create a desktop app and run it on
+                        your computer for free. You will only be charged if you want to create a distributable app for
+                        your customers.</p>
+                </div>
+                <div class="lg:w-1/2">
+                    <img class="p-12" src="Assets/asset 53.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------Pricing-Section------------------------------->
+        <div id="pricing" class="container">
+            <h2 class="text-5xl leading-normal sm:font-semibold max-w-2xl">Choose a plan that fits your needs</h2>
+            <div class="flex flex-col lg:flex-row mt-6 gap-6">
+                <div class="border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-50">
+                    <h3 class="text-4xl">Free</h3>
+                    <p class="text-lg font-light">For personal use or testing your app before deploying to customers.
+                    </p>
+                    <p class="uppercase">Key Features</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Run app locally</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span class="text-lg font-light text-gray-800">No Code Signing</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span class="text-lg font-light text-gray-800">No Native Installers</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="border px-8 p-3 text-primary rounded-lg hover:border-gray-800 font-display font-medium">Read
+                        Docs</button>
+                </div>
+                <div class="border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-50">
+                    <h3 class="text-4xl">Essential</h3>
+                    <p class="text-lg font-light">For simple desktop apps.</p>
+                    <p class="text-lg font-light"><span class="text-2xl font-semibold">$99</span>/month</p>
+                    <p class="uppercase">Key Features</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Windows, Mac & Linux</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Code Signing</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Native Installers</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Email/chat support</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="border px-8 p-3 text-primary rounded-lg hover:border-gray-800 font-display font-medium">Read
+                        Docs</button>
+                </div>
+                <div
+                    class="relative border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-50">
+                    <p
+                        class="text-blue-800 text-sm bg-indigo-100 border rounded-full w-fit px-4 py-2 font-display absolute top-0 right-8 -translate-y-1/2 font-semibold">
+                        Most Popular</p>
+                    <h3 class="text-4xl">Professional</h3>
+                    <p class="text-lg font-light">For sophisticated desktop apps.</p>
+                    <p class="text-lg font-light"><span class="text-2xl font-semibold">$240</span>/month</p>
+                    <p class="uppercase">Key Features</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Branded Download links</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Analytics</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800"> Access to Plugins</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg font-light text-gray-800">Access to restricted API</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="px-8 p-3 text-white bg-primary rounded-lg hover:bg-opacity-90 font-display font-medium">Read
+                        Docs</button>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------FAQ's-Section------------------------------>
+
+        <div id="faq" class="container">
+            <h2 class="text-5xl leading-normal sm:font-semibold max-w-2xl">FAQs</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-6 items-start">
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-1">
+                        <p class="font-semibold text-lg ">Is ToDesktop For Me?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-1" class="hidden text-lg font-light mt-6">
+                        <p>That depends! If you would like to distribute your web app to your users as downloadable
+                            desktop app then ToDesktop is for you.</p>
+                    </dd>
+                </div>
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-2">
+                        <p class="font-semibold text-lg ">Will my app work offline?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-2" class="hidden text-lg font-light mt-6">
+                        <p>Think of ToDesktop as a normal browser that is just for your website. Your website will work
+                            exactly as it does in Chrome, or any other browser.</p>
+                    </dd>
+                </div>
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-3">
+                        <p class="font-semibold text-lg ">Can I try ToDesktop without buying?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-3" class="hidden text-lg font-light mt-6">
+                        <p>Yes. You can get started by downloading ToDesktop Builder at no cost. After installing it,
+                            you can build your desktop application and preview it by clicking the “Run” button. This
+                            allows you to test the app on your own computer to ensure it performs to your expectations.
+                        </p>
+                    </dd>
+                </div>
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-4">
+                        <p class="font-semibold text-lg ">How does ToDesktop work under the hood?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-4" class="hidden text-lg font-light mt-6">
+                        <p>It can help to think of ToDesktop as a custom web browser dedicated to your web app or
+                            website. It shows a live version of your site or web app at all times, just like a web
+                            browser. There is no toolbar or address bar or refresh buttons but it behaves and functions
+                            just like a web browser. This means you don’t need to do anything to your existing site, it
+                            will just work. If your site works in Google Chrome then it is compatible with ToDesktop.
+                        </p>
+                    </dd>
+                </div>
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-5">
+                        <p class="font-semibold text-lg ">What features are on the product roadmap?
+
+                        </p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-5" class="hidden text-lg font-light mt-6">
+                        <p>If you have any suggestions, we’d love to hear! Please send us an email at
+                            support@todesktop.com or send us a message</p>
+                    </dd>
+                </div>
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-6">
+                        <p class="font-semibold text-lg ">Which version of Electron/Chromium is used?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-6" class="hidden text-lg font-light mt-6">
+                        <p>ToDesktop is currently based on Chromium 118 and Electron 27. When Electron releases a new
+                            version you can expect us to update it shortly after. We prioritize security fixes and
+                            endeavour to release them as soon as possible. All updates are pushed out to all your users
+                            over auto-update.
+
+                            You can learn more about this here.</p>
+                    </dd>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------------------------------Footer-Section-------------------------->
+
+        <footer class="container">
+            <div
+                class="rounde-lg border lg:border-none lg:bg-gray-50 bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8">
+                <a href="#" class="font-light font-display">Documentation</a>
+                <div class="flex gap-8 text-lg">
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="#" id="brand" class="flex flex-1 gap-2 items-center">
+                    <img class="object-cover max-w-12 max-h-12" src="Assets/asset 0.png" alt="logo">
+                    <span class="text-large font-medium">ToDesktop</span>
+                </a>
+            </div>
+            <!-- --------------------sub-footer------------------------->
+            <div id="sub-footer" class="flex flex-col gap-6 items-center my-12">
+                <div class="flex gap-2 items-center">
+                    <img class="w-4 h-4" src="Assets/asset 54.svg" alt="y-combinator">
+                    <p class="text-sm text-gray-600">A Y Combinator company.</p>
+                </div>
+                <p class="text-sm text-gray-400">© 2024 ToDesktop, Inc. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
